@@ -1,6 +1,7 @@
 functions --query humantime || exit
 
 @test "milliseconds" (humantime 1) = 1ms
+@test "milliseconds 999" (humantime 999) = 999ms
 @test "seconds" (humantime 1000) = 1s
 @test "fractional seconds" (humantime 1100) = 1.1s
 @test "minutes" (humantime 60000) = 1m
